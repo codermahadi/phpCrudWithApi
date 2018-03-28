@@ -13,7 +13,7 @@ class DbOparation
 
     function __construct()
     {
-        require_once dirname(__FILE__) . 'DbConnect.php';
+        include 'DbConnect.php';
 
         $db = new DbConnect();
 

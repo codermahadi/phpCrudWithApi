@@ -10,7 +10,7 @@
 
         function connect(){
 
-            include_once dirname(__FILE__).'config.php';
+            include 'config.php';
 
             $this->con = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
