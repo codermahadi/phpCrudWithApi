@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a37dc65d-0f9d-4ab3-8129-3aec25fbcd26" name="Default" comment="" />
+    <list default="true" id="a37dc65d-0f9d-4ab3-8129-3aec25fbcd26" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/DbOparation.php" afterPath="$PROJECT_DIR$/lib/DbOparation.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +37,11 @@
       <file leaf-file-name="DbOparation.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/DbOparation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="284">
+              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="e#7#91#0#PHP" expanded="false" />
+                <marker date="1522216200045" expanded="true" signature="434:489" ph="INSERT INTO user... " />
               </folding>
             </state>
           </provider>
@@ -252,12 +255,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522212565521</updated>
-      <workItem from="1522212567121" duration="3275000" />
+      <workItem from="1522212567121" duration="3431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3275000" />
+    <option name="totallyTimeSpent" value="3431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="0" />
@@ -311,10 +314,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/DbOparation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="284">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="e#7#91#0#PHP" expanded="false" />
+            <marker date="1522216200045" expanded="true" signature="434:489" ph="INSERT INTO user... " />
           </folding>
         </state>
       </provider>
