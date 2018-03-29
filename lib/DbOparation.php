@@ -21,20 +21,61 @@ class DbOparation
     }
 
     //    Create User
-    function createUser($username, $password, $email)
+    public function createUser($username, $password, $email)
     {
-        $password = md5($password);
-        $sql = "INSERT INTO user(username,password,email)VALUES (?,?,?)";
-        $stmt = $this->con->prepare($sql);
-        $stmt->bind_param("sss", $username, $password, $email);
 
-        if ($stmt->execute()) {
-
-            return true;
+        if ($this->isUserExits($username, $email)) {
+            return 0;
         } else {
-            return false;
+            $password = md5($password);
+            $sql = "INSERT INTO user(username,password,email)VALUES (?,?,?)";
+            $stmt = $this->con->prepare($sql);
+            $stmt->bind_param("sss", $username, $password, $email);
+
+            if ($stmt->execute()) {
+
+                return 1;
+            } else {
+                return 2;
+            }
+
         }
 
-
     }
+
+//    UserLogin function
+    public function userLogin($username, $password)
+    {
+
+        $password = md5($password);
+        $sql = "SELECT id FROM user WHERE username = ? AND password = ?";
+        $stmt = $this->con->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $stmt->store_result();
+        return $stmt->num_rows > 0;
+    }
+
+//    Fetch All Data
+
+    public function getUserByUsername($username)
+    {
+        $sql = "SELECT * FROM user WHERE username = ?";
+        $stmt = $this->con->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc();
+    }
+
+    private function isUserExits($username, $email)
+    {
+        $sql = "SELECT id FROM user WHERE username = ? OR email = ?";
+        $stmt = $this->con->prepare($sql);
+        $stmt->bind_param("ss", $username, $email);
+        $stmt->execute();
+        $stmt->store_result();
+        return $stmt->num_rows > 0;
+    }
+
+
 }
