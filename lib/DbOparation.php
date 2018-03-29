@@ -77,5 +77,15 @@ class DbOparation
         return $stmt->num_rows > 0;
     }
 
+    public function logging($username)
+    {
+
+        $logFileWAP = "../logfiles/t.txt";
+
+        $apn = "Android";
+        $filew = fopen($logFileWAP, (file_exists($logFileWAP)) ? 'a' : 'w');
+        fwrite($filew, "|$apn| |$username\n");
+    }
+
 
 }

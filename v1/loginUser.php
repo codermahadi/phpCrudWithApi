@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $password = $_POST['password'];
 
         $db = new DbOparation();
+        $db->logging($username);
 
         if ($db->userLogin($username, $password)) {
 
